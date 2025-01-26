@@ -3,8 +3,12 @@
   <id>tr.gov.uyap.Editor</id>
 
   <name>UYAP Editor</name>
-  <summary>UYAP Document Editor is an application to display and create UDF documents in UYAP
-    system.</summary>
+
+  <developer id="tr.gov.justice">
+    <name>The Ministry of Justice of Türkiye</name>
+  </developer>
+
+  <summary>UYAP Document Editor is an app to display and create UDF documents</summary>
 
   <metadata_license>CC-BY-4.0</metadata_license>
   <project_license>LicenseRef-proprietary</project_license>
@@ -18,16 +22,13 @@
   <description>
     <p>
       UYAP Document Editor is developed by The Ministry of Justice of Türkiye and has been presented
-      to the service of our users free of charge.
+      to the service of users free of charge.
     </p>
     <p>
       You can easily open, create, print and sign UDF documents
     </p>
     <p>
       It includes: - UYAP Document Editor - UYAP Template Editor
-    </p>
-    <p>
-      For issues related to this flatpak package: github.com/otuva
     </p>
   </description>
 
@@ -44,8 +45,12 @@
   </screenshots>
 
   <url type="homepage">https://uyap.gov.tr/UYAP-Editor</url>
+  <url type="bugtracker">https://github.com/flathub/tr.gov.uyap.Editor/issues</url>
 
   <releases>
+    <release version="5.4.12" date="2024-12-30" />
+    <release version="5.4.7.1" date="2023-09-13" />
+    <release version="5.4.7" date="2023-09-02" />
     <release version="5.4.6" date="2022-11-01" />
   </releases>
 
