@@ -38,7 +38,6 @@ modules:
     buildsystem: simple
     build-commands:
       - mkdir /app/bin
-      - ln -s /app/jre/bin/java /app/bin/java
       - install -Dm644 tr.gov.uyap.Editor.png /app/share/icons/hicolor/128x128/apps/tr.gov.uyap.Editor.png
       - install -Dm644 tr.gov.uyap.Editor.desktop /app/share/applications/tr.gov.uyap.Editor.desktop
       - install -Dm644 tr.gov.uyap.Editor.Template.desktop /app/share/applications/tr.gov.uyap.Editor.Template.desktop
@@ -48,6 +47,7 @@ modules:
       - cp -r usr/share/* /app/share/
       - sed -i 's/\/usr\/share/\/app\/share/g' /app/share/UYAPEditor/dokuman.sh
       - sed -i 's/\/usr\/share/\/app\/share/g' /app/share/UYAPEditor/sablon.sh
+      - ln -s /app/jre/bin/java /app/bin/java
       - ln -s /app/share/UYAPEditor/dokuman.sh /app/bin/uyapeditor
       - ln -s /app/share/UYAPEditor/sablon.sh /app/bin/uyapsablon
     sources:
