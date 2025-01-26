@@ -3,6 +3,8 @@ sdk: org.freedesktop.Sdk
 runtime: org.freedesktop.Platform
 runtime-version: "24.08"
 command: uyapeditor
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.openjdk17
 
 finish-args:
   - "--share=ipc"
@@ -31,7 +33,7 @@ modules:
   - name: openjdk
     buildsystem: simple
     build-commands:
-      - /usr/lib/sdk/openjdk20/install.sh
+      - /usr/lib/sdk/openjdk17/install.sh
   - name: uyapeditor
     buildsystem: simple
     build-commands:
