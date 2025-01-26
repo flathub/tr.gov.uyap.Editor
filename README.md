@@ -12,5 +12,6 @@ sudo apt install flatpak flatpak-builder && flatpak remote-add --if-not-exists f
 flatpak install -y org.freedesktop.Platform/x86_64/24.08
 flatpak install -y org.freedesktop.Sdk/x86_64/24.08
 flatpak install -y org.freedesktop.Sdk.Extension.openjdk11/x86_64/24.08
+appstreamcli validate --explain platform/tr.gov.uyap.Editor.metainfo.xml
 flatpak-builder --user --install --force-clean build-dir tr.gov.uyap.Editor.yaml
 ```
