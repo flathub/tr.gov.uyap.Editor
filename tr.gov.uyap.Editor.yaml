@@ -42,7 +42,7 @@ modules:
       - install -Dm644 tr.gov.uyap.Editor.png /app/share/icons/hicolor/128x128/apps/tr.gov.uyap.Editor.png
       - install -Dm644 tr.gov.uyap.Editor.desktop /app/share/applications/tr.gov.uyap.Editor.desktop
       - install -Dm644 tr.gov.uyap.Editor.Template.desktop /app/share/applications/tr.gov.uyap.Editor.Template.desktop
-      - install -Dm644 tr.gov.uyap.Editor.appdata.xml /app/share/appdata/tr.gov.uyap.Editor.appdata.xml
+      - install -Dm644 tr.gov.uyap.Editor.metainfo.xml /app/share/appdata/tr.gov.uyap.Editor.metainfo.xml
       - unzip pardus541230-12-20241-59-pm.zip && cd uyap_pardus_5_4_12_amd64
       - ar -x uyapeditor_5.4.12_amd64.deb data.tar.xz
       - tar -xf data.tar.xz ./usr
@@ -62,4 +62,4 @@ modules:
       - type: file
         path: platform/tr.gov.uyap.Editor.Template.desktop
       - type: file
-        path: platform/tr.gov.uyap.Editor.appdata.xml
+        path: platform/tr.gov.uyap.Editor.metainfo.xml
