@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>tr.gov.uyap.Editor</id>
+  <id>tr.gov.uyap.editor</id>
 
   <name>UYAP Editor</name>
-  <summary>UYAP Document Editor is an application to display and create UDF documents in UYAP system.</summary>
+
+  <developer id="tr.gov.justice">
+    <name>The Ministry of Justice of Türkiye</name>
+  </developer>
+
+  <summary>UYAP Document Editor is an app to display and create UDF documents</summary>
 
   <metadata_license>CC-BY-4.0</metadata_license>
   <project_license>LicenseRef-proprietary</project_license>
@@ -43,10 +48,10 @@
   <url type="bugtracker">https://github.com/flathub/tr.gov.uyap.Editor/issues</url>
 
   <releases>
-    <release version="5.4.6" date="2022-11-01" />
-    <release version="5.4.7" date="2023-09-02" />
-    <release version="5.4.7.1" date="2023-09-13" />
     <release version="5.4.12" date="2024-12-30" />
+    <release version="5.4.7.1" date="2023-09-13" />
+    <release version="5.4.7" date="2023-09-02" />
+    <release version="5.4.6" date="2022-11-01" />
   </releases>
 
   <content_rating type="oars-1.1" />
