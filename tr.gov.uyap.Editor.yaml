@@ -44,6 +44,7 @@ modules:
       - ar x uyapeditor_5.4.12_amd64.deb
       - tar -xf data.tar.zst ./usr
       - cp -r usr/share/* /app/share/
+      - rename udf tr.gov.uyap.Editor.udf /app/share/mime/packages/udf.xml
       - find /app/share/icons -name "uyap-editor.png" -exec rename uyap-editor tr.gov.uyap.Editor {} ";"
       - sed -i 's/\/usr\/share/\/app\/share/g' /app/share/UYAPEditor/dokuman.sh
       - sed -i 's/\/usr\/share/\/app\/share/g' /app/share/UYAPEditor/sablon.sh
