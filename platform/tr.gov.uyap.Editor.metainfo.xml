@@ -8,7 +8,7 @@
     <name>The Ministry of Justice of Türkiye</name>
   </developer>
 
-  <summary>UYAP Document Editor is an app to display and create UDF documents</summary>
+  <summary>Edit and view UDF documents</summary>
 
   <metadata_license>CC-BY-4.0</metadata_license>
   <project_license>LicenseRef-proprietary</project_license>
@@ -28,7 +28,7 @@
       You can easily open, create, print and sign UDF documents
     </p>
     <p>
-      It includes: - UYAP Document Editor - UYAP Template Editor
+      It includes both UYAP Document Editor and UYAP Template Editor
     </p>
   </description>
 
