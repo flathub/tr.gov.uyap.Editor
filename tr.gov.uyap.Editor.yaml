@@ -38,13 +38,14 @@ modules:
     buildsystem: simple
     build-commands:
       - mkdir /app/bin
-      - install -Dm644 tr.gov.uyap.Editor.png /app/share/icons/hicolor/128x128/apps/tr.gov.uyap.Editor.png
       - install -Dm644 tr.gov.uyap.Editor.desktop /app/share/applications/tr.gov.uyap.Editor.desktop
       - install -Dm644 tr.gov.uyap.Editor.Template.desktop /app/share/applications/tr.gov.uyap.Editor.Template.desktop
       - install -Dm644 tr.gov.uyap.Editor.metainfo.xml /app/share/appdata/tr.gov.uyap.Editor.metainfo.xml
       - ar x uyapeditor_5.4.12_amd64.deb
       - tar -xf data.tar.zst ./usr
       - cp -r usr/share/* /app/share/
+      - rename udf tr.gov.uyap.Editor.udf /app/share/mime/packages/udf.xml
+      - find /app/share/icons -name "uyap-editor.png" -exec rename uyap-editor tr.gov.uyap.Editor {} ";"
       - sed -i 's/\/usr\/share/\/app\/share/g' /app/share/UYAPEditor/dokuman.sh
       - sed -i 's/\/usr\/share/\/app\/share/g' /app/share/UYAPEditor/sablon.sh
       - ln -s /app/jre/bin/java /app/bin/java
@@ -54,8 +55,6 @@ modules:
       - type: archive
         url: "https://rayp.adalet.gov.tr/resimler/2/dosya/pardus541230-12-20241-59-pm.zip" # why distribute like this
         sha256: 846d1410064cc77705faf58cea56414fbe9501639a1d92573319fce6aef2e600
-      - type: file
-        path: platform/tr.gov.uyap.Editor.png
       - type: file
         path: platform/tr.gov.uyap.Editor.desktop
       - type: file
