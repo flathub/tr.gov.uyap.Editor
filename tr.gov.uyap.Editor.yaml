@@ -14,7 +14,8 @@ finish-args:
   - "--socket=pcsc"
   - "--socket=cups"
   - "--device=dri"
-  - "--filesystem=home"
+  - "--filesystem=xdg-documents"
+  - "--persist=."
   - "--env=JAVA_HOME=/app/jre"
 
 cleanup:
