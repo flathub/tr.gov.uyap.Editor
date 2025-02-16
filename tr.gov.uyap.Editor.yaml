@@ -10,11 +10,11 @@ finish-args:
   - "--share=ipc"
   - "--share=network"
   - "--socket=x11"
-  - "--socket=pulseaudio"
   - "--socket=pcsc"
   - "--socket=cups"
   - "--device=dri"
-  - "--filesystem=home"
+  - "--filesystem=xdg-documents"
+  - "--persist=."
   - "--env=JAVA_HOME=/app/jre"
 
 cleanup:
