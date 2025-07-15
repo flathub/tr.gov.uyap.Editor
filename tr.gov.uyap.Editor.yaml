@@ -1,21 +1,21 @@
 id: tr.gov.uyap.Editor
 sdk: org.freedesktop.Sdk
 runtime: org.freedesktop.Platform
-runtime-version: "24.08"
+runtime-version: '24.08'
 command: uyapeditor
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.openjdk11
 
 finish-args:
-  - "--share=ipc"
-  - "--share=network"
-  - "--socket=x11"
-  - "--socket=pcsc"
-  - "--socket=cups"
-  - "--device=dri"
-  - "--filesystem=xdg-documents"
-  - "--persist=."
-  - "--env=JAVA_HOME=/app/jre"
+  - --share=ipc
+  - --share=network
+  - --socket=x11
+  - --socket=pcsc
+  - --socket=cups
+  - --device=dri
+  - --filesystem=xdg-documents
+  - --persist=.
+  - --env=JAVA_HOME=/app/jre
 
 cleanup:
   - /cache
@@ -45,7 +45,8 @@ modules:
       - tar -xf data.tar.zst ./usr
       - cp -r usr/share/* /app/share/
       - rename udf tr.gov.uyap.Editor.udf /app/share/mime/packages/udf.xml
-      - find /app/share/icons -name "uyap-editor.png" -exec rename uyap-editor tr.gov.uyap.Editor {} ";"
+      - find /app/share/icons -name "uyap-editor.png" -exec rename uyap-editor tr.gov.uyap.Editor
+        {} ";"
       - sed -i 's/\/usr\/share/\/app\/share/g' /app/share/UYAPEditor/dokuman.sh
       - sed -i 's/\/usr\/share/\/app\/share/g' /app/share/UYAPEditor/sablon.sh
       - ln -s /app/jre/bin/java /app/bin/java
@@ -53,11 +54,11 @@ modules:
       - ln -s /app/share/UYAPEditor/sablon.sh /app/bin/uyapsablon
     sources:
       - type: archive
-        url: "https://rayp.adalet.gov.tr/resimler/2/dosya/pardus541230-12-20241-59-pm.zip" # why distribute like this
-        sha256: 846d1410064cc77705faf58cea56414fbe9501639a1d92573319fce6aef2e600
+        url: https://rayp.adalet.gov.tr/resimler/2/dosya/uyap-pardus-5-4-14-amd6403-06-20251-41-pm.zip # why distribute like this
+        sha256: a515293ee2c30b65160c61f37bd150a5b39c402432ab6c7c654a2c47bd7fb364
         x-checker-data:
           type: html
-          url: "https://uyap.gov.tr/UYAP-Editor"
+          url: https://uyap.gov.tr/UYAP-Editor
           pattern: (//rayp.adalet.gov.tr/resimler/2/dosya/uyap-pardus-(\d-\d-\d\d)-amd64.*\.zip)
       - type: file
         path: platform/tr.gov.uyap.Editor.desktop
