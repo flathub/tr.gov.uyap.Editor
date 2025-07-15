@@ -48,6 +48,7 @@
   <url type="bugtracker">https://github.com/flathub/tr.gov.uyap.Editor/issues</url>
 
   <releases>
+    <release version="5.4.14" date="2025-06-03" />
     <release version="5.4.12" date="2024-12-30" />
     <release version="5.4.7.1" date="2023-09-13" />
     <release version="5.4.7" date="2023-09-02" />
