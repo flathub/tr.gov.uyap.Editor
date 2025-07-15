@@ -55,6 +55,10 @@ modules:
       - type: archive
         url: "https://rayp.adalet.gov.tr/resimler/2/dosya/pardus541230-12-20241-59-pm.zip" # why distribute like this
         sha256: 846d1410064cc77705faf58cea56414fbe9501639a1d92573319fce6aef2e600
+        x-checker-data:
+          type: html
+          url: "https://uyap.gov.tr/UYAP-Editor"
+          pattern: (//rayp.adalet.gov.tr/resimler/2/dosya/uyap-pardus-(\d-\d-\d\d)-amd64.*\.zip)
       - type: file
         path: platform/tr.gov.uyap.Editor.desktop
       - type: file
