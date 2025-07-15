@@ -41,8 +41,8 @@ modules:
       - install -Dm644 tr.gov.uyap.Editor.desktop /app/share/applications/tr.gov.uyap.Editor.desktop
       - install -Dm644 tr.gov.uyap.Editor.Template.desktop /app/share/applications/tr.gov.uyap.Editor.Template.desktop
       - install -Dm644 tr.gov.uyap.Editor.metainfo.xml /app/share/appdata/tr.gov.uyap.Editor.metainfo.xml
-      - ar x uyapeditor_5.4.12_amd64.deb
-      - tar -xf data.tar.zst ./usr
+      - find . -name "uyapeditor_*_amd64.deb" -exec ar x {} ";"
+      - find . -name "data.tar.*" -exec tar -xf {} ";"
       - cp -r usr/share/* /app/share/
       - rename udf tr.gov.uyap.Editor.udf /app/share/mime/packages/udf.xml
       - find /app/share/icons -name "uyap-editor.png" -exec rename uyap-editor tr.gov.uyap.Editor
