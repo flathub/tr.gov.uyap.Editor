@@ -54,8 +54,8 @@ modules:
       - ln -s /app/share/UYAPEditor/sablon.sh /app/bin/uyapsablon
     sources:
       - type: archive
-        url: https://rayp.adalet.gov.tr/resimler/2/dosya/uyap-pardus-5-4-14-amd6403-06-20251-41-pm.zip # why distribute like this
-        sha256: a515293ee2c30b65160c61f37bd150a5b39c402432ab6c7c654a2c47bd7fb364
+        url: https://rayp.adalet.gov.tr/resimler/2/dosya/uyap-pardus-5-4-16-amd6429-12-20252-41-pm.zip # why distribute like this
+        sha256: 2e3643111cce9d0d0c71e8300ef85d02f7591b96b43f9aabdb98564aa6bcd0a8
         x-checker-data:
           type: html
           url: https://uyap.gov.tr/UYAP-Editor
