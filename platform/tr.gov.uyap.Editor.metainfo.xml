@@ -30,6 +30,10 @@
     <p>
       It includes both UYAP Document Editor and UYAP Template Editor
     </p>
+    <p>
+      This software package is packaged by a third party and is not maintained by the original developers.
+      Bu paketin UYAP ile hicbir bagi yoktur.
+    </p>
   </description>
 
   <launchable type="desktop-id">tr.gov.uyap.Editor.desktop</launchable>
@@ -48,8 +52,10 @@
   <url type="bugtracker">https://github.com/flathub/tr.gov.uyap.Editor/issues</url>
 
   <releases>
+    <release version="5.4.16" date="2025-12-29" />
     <release version="5.4.14" date="2025-06-03" />
     <release version="5.4.12" date="2024-12-30" />
+    <release version="5.4.11" date="2023-12-11" />
     <release version="5.4.7.1" date="2023-09-13" />
     <release version="5.4.7" date="2023-09-02" />
     <release version="5.4.6" date="2022-11-01" />

@@ -1,4 +1,4 @@
-# tr.gov.uyap.Editor
+# Not: Bu paketin UYAP ile hicbir bagi yoktur.
 
 Flatpak paketi ile ilgili tum problemleri buraya issue olarak acabilirsiniz.
 
