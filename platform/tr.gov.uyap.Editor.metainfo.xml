@@ -30,6 +30,9 @@
     <p>
       It includes both UYAP Document Editor and UYAP Template Editor
     </p>
+    <p>
+      This software package is packaged by a third party and is not maintained by the original developers.
+    </p>
   </description>
 
   <launchable type="desktop-id">tr.gov.uyap.Editor.desktop</launchable>
