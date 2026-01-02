@@ -3,12 +3,15 @@
   <id>tr.gov.uyap.Editor</id>
 
   <name>UYAP Editor</name>
+  <name xml:lang="tr">UYAP Editör</name>
 
   <developer id="tr.gov.justice">
     <name>The Ministry of Justice of Türkiye</name>
+    <name xml:lang="tr">Türkiye Adalet Bakanlığı</name>
   </developer>
 
   <summary>Edit and view UDF documents</summary>
+  <summary xml:lang="tr">UDF belgelerini düzenle ve görüntüle</summary>
 
   <metadata_license>CC-BY-4.0</metadata_license>
   <project_license>LicenseRef-proprietary</project_license>
@@ -20,31 +23,27 @@
   </supports>
 
   <description>
-    <p>
-      UYAP Document Editor is developed by The Ministry of Justice of Türkiye and has been presented
-      to the service of users free of charge.
-    </p>
-    <p>
-      You can easily open, create, print and sign UDF documents
-    </p>
-    <p>
-      It includes both UYAP Document Editor and UYAP Template Editor
-    </p>
-    <p>
-      This software package is packaged by a third party and is not maintained by the original developers.
-      Bu paketin UYAP ile hicbir bagi yoktur.
-    </p>
+    <p>UYAP Document Editor was developed by the Turkish Ministry of Justice and is offered to users free of charge.</p>
+    <p xml:lang="tr">UYAP Belge Düzenleyici, Türkiye Adalet Bakanlığı tarafından geliştirilmiş olup kullanıcılara ücretsiz olarak sunulmuştur.</p>
+    <p>You can easily open, create, print, and sign UDF documents.</p>
+    <p xml:lang="tr">UDF belgelerini kolayca açabilir, oluşturabilir, yazdırabilir ve imzalayabilirsiniz.</p>
+    <p>It includes both the UYAP Document Editor and the UYAP Template Editor.</p>
+    <p xml:lang="tr">Hem UYAP Belge Düzenleyicisini hem de UYAP Şablon Düzenleyicisini içerir.</p>
+    <p>NOTE: This wrapper is not verified by, affiliated with, or supported by the official developer.</p>
+    <p xml:lang="tr">NOT: Bu sarmalayıcı, resmi geliştiricileri tarafından doğrulanmamıştır, resmi geliştiricileriyle ilişkili değildir ya da onlar tarafından desteklenmemektedir.</p>
   </description>
 
   <launchable type="desktop-id">tr.gov.uyap.Editor.desktop</launchable>
   <screenshots>
     <screenshot type="default">
-      <caption>Document Editor Interface</caption>
       <image>https://i.imgur.com/eBIBEes.png</image>
+      <caption>Document Editor Interface</caption>
+      <caption xml:lang="tr">Belge Düzenleyici Arayüzü</caption>
     </screenshot>
     <screenshot>
-      <caption>Template Editor Interface</caption>
       <image>https://i.imgur.com/8HP6DSf.png</image>
+      <caption>Template Editor Interface</caption>
+      <caption xml:lang="tr">Şablon Düzenleyici Arayüzü</caption>
     </screenshot>
   </screenshots>
 
@@ -55,10 +54,6 @@
     <release version="5.4.16" date="2025-12-29" />
     <release version="5.4.14" date="2025-06-03" />
     <release version="5.4.12" date="2024-12-30" />
-    <release version="5.4.11" date="2023-12-11" />
-    <release version="5.4.7.1" date="2023-09-13" />
-    <release version="5.4.7" date="2023-09-02" />
-    <release version="5.4.6" date="2022-11-01" />
   </releases>
 
   <content_rating type="oars-1.1" />
