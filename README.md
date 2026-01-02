@@ -1,17 +1,24 @@
-# Not: Bu paketin UYAP ile hicbir bagi yoktur.
+# UYAP Editor
 
-Flatpak paketi ile ilgili tum problemleri buraya issue olarak acabilirsiniz.
+___Edit and view UDF documents___
 
-Tuhaf bir sekilde dagittiklari icin pardus repolarindan degil https://uyap.gov.tr/UYAP-Editor sayfasindaki en guncel versiyon pardus icin ne ise oradan almakta.
+UYAP Document Editor is a document viewer for the Turkish Ministry of Justice's legal document format (UDF).
 
-Build
+---
 
+## Manual Install and Run
+
+Make sure you follow the [setup guide for your Linux distribution](https://flathub.org/en/setup) before installing.
+
+```bash
+flatpak install flathub tr.gov.uyap.Editor
+flatpak run tr.gov.uyap.Editor
 ```
-git clone https://github.com/flathub/tr.gov.uyap.Editor && cd tr.gov.uyap.Editor
-sudo apt install flatpak flatpak-builder && flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install -y org.freedesktop.Platform/x86_64/24.08
-flatpak install -y org.freedesktop.Sdk/x86_64/24.08
-flatpak install -y org.freedesktop.Sdk.Extension.openjdk11/x86_64/24.08
-appstreamcli validate --explain platform/tr.gov.uyap.Editor.metainfo.xml
-flatpak-builder --user --install --force-clean build-dir tr.gov.uyap.Editor.yaml
+
+## Building
+
+```bash
+git clone git@github.com:flathub/tr.gov.uyap.Editor.git
+flatpak run org.flatpak.Builder build-dir --user --ccache --force-clean --install tr.gov.uyap.Editor.yaml
 ```
+
