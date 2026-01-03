@@ -23,14 +23,16 @@
   </supports>
 
   <description>
+    <p>**This is a community package of UYAP Editor and not officially supported by The Ministry of Justice of Türkiye.**</p>
+    <p xml:lang="tr">**Bu, UYAP Editor'ün toplulukca paketlenmiş Flatpak sürümüdür ve Türkiye Adalet Bakanlığı tarafından resmi olarak desteklenmemektedir.**</p>
+    <p>**This app is only available in Turkish.**</p>
+    <p xml:lang="tr">**Bu uygulama yalnızca Türkçe'yi destekler.**</p>
     <p>UYAP Document Editor was developed by the Turkish Ministry of Justice and is offered to users free of charge.</p>
     <p xml:lang="tr">UYAP Belge Düzenleyici, Türkiye Adalet Bakanlığı tarafından geliştirilmiş olup kullanıcılara ücretsiz olarak sunulmuştur.</p>
     <p>You can easily open, create, print, and sign UDF documents.</p>
     <p xml:lang="tr">UDF belgelerini kolayca açabilir, oluşturabilir, yazdırabilir ve imzalayabilirsiniz.</p>
     <p>It includes both the UYAP Document Editor and the UYAP Template Editor.</p>
     <p xml:lang="tr">Hem UYAP Belge Düzenleyicisini hem de UYAP Şablon Düzenleyicisini içerir.</p>
-    <p>NOTE: This wrapper is not verified by, affiliated with, or supported by the official developer.</p>
-    <p xml:lang="tr">NOT: Bu sarmalayıcı, resmi geliştiricileri tarafından doğrulanmamıştır, resmi geliştiricileriyle ilişkili değildir ya da onlar tarafından desteklenmemektedir.</p>
   </description>
 
   <launchable type="desktop-id">tr.gov.uyap.Editor.desktop</launchable>
