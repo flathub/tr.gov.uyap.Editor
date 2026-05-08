@@ -1,7 +1,7 @@
 id: tr.gov.uyap.Editor
 sdk: org.freedesktop.Sdk
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 command: uyapeditor
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.openjdk11
@@ -16,18 +16,6 @@ finish-args:
   - --filesystem=xdg-documents
   - --persist=.
   - --env=JAVA_HOME=/app/jre
-
-cleanup:
-  - /cache
-  - /man
-  - /share/aclocal
-  - /share/devhelp
-  - /include
-  - /lib/pkgconfig
-  - /share/gtk-doc
-  - /share/man
-  - /lib/*.a
-  - /lib/*.la
 
 modules:
   - name: openjdk
