@@ -23,8 +23,6 @@
   </supports>
 
   <description>
-    <p>**This is a community package of UYAP Editor and not officially supported by The Ministry of Justice of Türkiye.**</p>
-    <p xml:lang="tr">**Bu, UYAP Editor'ün toplulukca paketlenmiş Flatpak sürümüdür ve Türkiye Adalet Bakanlığı tarafından resmi olarak desteklenmemektedir.**</p>
     <p>**This app is only available in Turkish.**</p>
     <p xml:lang="tr">**Bu uygulama yalnızca Türkçe'yi destekler.**</p>
     <p>UYAP Document Editor was developed by the Turkish Ministry of Justice and is offered to users free of charge.</p>
