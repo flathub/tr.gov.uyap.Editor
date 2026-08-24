@@ -42,12 +42,17 @@ modules:
       - ln -s /app/share/UYAPEditor/sablon.sh /app/bin/uyapsablon
     sources:
       - type: archive
-        url: https://rayp.adalet.gov.tr/resimler/2/dosya/uyap-pardus-5-4-16-amd6429-12-20252-41-pm.zip # why distribute like this
-        sha256: 2e3643111cce9d0d0c71e8300ef85d02f7591b96b43f9aabdb98564aa6bcd0a8
+        url: https://rayp.adalet.gov.tr/resimler/2/dosya/uyapeditor_5.4.20_amd64.zip
+        sha256: 5a31393af180723c8dff1e88e58c34ba5a5f85e43c197d0e05048de3b96a059f
         x-checker-data:
           type: html
           url: https://uyap.gov.tr/UYAP-Editor
-          pattern: (//rayp.adalet.gov.tr/resimler/2/dosya/uyap-pardus-(\d-\d-\d\d)-amd64.*\.zip)
+          # upstream renames the file on a whim (5.4.16: uyap-pardus-5-4-16-amd64<date>.zip,
+          # 5.4.17: uyapeditor-5417-amd64<date>.zip, 5.4.20: uyapeditor_5.4.20_amd64.zip);
+          # prefix/separator variants are tolerated, but the version MUST be dotted:
+          # capturing "5417" or "5-4-16" would poison the checker's version comparison
+          pattern: (//rayp\.adalet\.gov\.tr/resimler/2/dosya/uyap[-_]?(?:editor|pardus)[-_](\d+(?:\.\d+)+)[-_]amd64[^"'\s<>]*\.zip)
+          is-main-source: true
       - type: file
         path: platform/tr.gov.uyap.Editor.desktop
       - type: file
