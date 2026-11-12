@@ -1,8 +1,9 @@
 id: tr.gov.uyap.Editor
 sdk: org.freedesktop.Sdk
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: '26.08'
 command: uyapeditor
+rename-icon: uyap-editor
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.openjdk11
 
@@ -22,21 +23,24 @@ modules:
     buildsystem: simple
     build-commands:
       - /usr/lib/sdk/openjdk11/install.sh
+
   - name: uyapeditor
     buildsystem: simple
     build-commands:
       - mkdir /app/bin
-      - install -Dm644 tr.gov.uyap.Editor.desktop /app/share/applications/tr.gov.uyap.Editor.desktop
-      - install -Dm644 tr.gov.uyap.Editor.Template.desktop /app/share/applications/tr.gov.uyap.Editor.Template.desktop
-      - install -Dm644 tr.gov.uyap.Editor.metainfo.xml /app/share/appdata/tr.gov.uyap.Editor.metainfo.xml
+      - install -Dm644 ${FLATPAK_ID}.desktop -t /app/share/applications/
+      - install -Dm644 ${FLATPAK_ID}.Template.desktop -t /app/share/applications/
+      - install -Dm644 ${FLATPAK_ID}.metainfo.xml -t /app/share/metainfo/
       - find . -name "uyapeditor_*_amd64.deb" -exec ar x {} ";"
       - find . -name "data.tar.*" -exec tar -xf {} ";"
       - cp -r usr/share/* /app/share/
-      - rename udf tr.gov.uyap.Editor.udf /app/share/mime/packages/udf.xml
-      - find /app/share/icons -name "uyap-editor.png" -exec rename uyap-editor tr.gov.uyap.Editor
-        {} ";"
+      # İki dosyanın dosya yollarını Flatpak için uyumla
       - sed -i 's/\/usr\/share/\/app\/share/g' /app/share/UYAPEditor/dokuman.sh
       - sed -i 's/\/usr\/share/\/app\/share/g' /app/share/UYAPEditor/sablon.sh
+      # udf dosya uzantılarını Flatpak kimliğiyle uyumla
+      - mv /app/share/mime/packages/udf.xml /app/share/mime/packages/${FLATPAK_ID}.udf.xml
+      # Oluşturulan dosyaların generic-icon/simge değerlerini Flatpak kimliğiyle uyumla
+      - sed -i 's/name="uyap-editor"/name="tr.gov.uyap.Editor"/g' /app/share/mime/packages/${FLATPAK_ID}.udf.xml
       - ln -s /app/jre/bin/java /app/bin/java
       - ln -s /app/share/UYAPEditor/dokuman.sh /app/bin/uyapeditor
       - ln -s /app/share/UYAPEditor/sablon.sh /app/bin/uyapsablon
@@ -52,7 +56,6 @@ modules:
           # prefix/separator variants are tolerated, but the version MUST be dotted:
           # capturing "5417" or "5-4-16" would poison the checker's version comparison
           pattern: (//rayp\.adalet\.gov\.tr/resimler/2/dosya/uyap[-_]?(?:editor|pardus)[-_](\d+(?:\.\d+)+)[-_]amd64[^"'\s<>]*\.zip)
-          is-main-source: true
       - type: file
         path: platform/tr.gov.uyap.Editor.desktop
       - type: file
